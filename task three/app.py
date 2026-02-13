@@ -18,3 +18,5 @@ async def calculate_result(numb: Num):
         "num_2": numb.number_2,
         "result": numb.number_1 + numb.number_2
     }
+
+# запустить через http://127.0.0.1:8000/docs и try out в calcuate
