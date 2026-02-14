@@ -3,13 +3,17 @@ from models import User
 
 app = FastAPI()
 
-new_user = User (
-    name="Гузаирова Ольга",
+current_user = User(
+    name = "Гузаирова Ольга",
     Id = 6
 )
 
 @app.get('/users')
 async def get_user():
-    return new_user
+    return current_user
 
-# чтобы посмотреть, надо перейти в /users
+@app.get('/')
+async def root():
+    return {"message": "Сервер работает."}
+
+# чтобы посмотреть данные пользователя, надо перейти в /users

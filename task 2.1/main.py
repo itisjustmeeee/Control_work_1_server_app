@@ -17,3 +17,5 @@ async def get_messages():
 async def get_message(mes: Feedback):
     message_bd.append({"name": mes.name, "message": mes.message})
     return {"message": f"Feedback received. Thank you, {mes.name}"}
+
+# запускать через /docs в feedback try out для добавления ответа, в / try out для просмотра всех ответов
